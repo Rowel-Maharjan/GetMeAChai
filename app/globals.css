@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.major{
+    color: #18d55f;
+}
+
+.minor{
+    color: #69b17f;
+}
+
