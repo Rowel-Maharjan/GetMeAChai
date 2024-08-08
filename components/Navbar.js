@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav className='bg-gray-900 text-white flex justify-between h-12 px-5 items-center'>
+    <nav className='bg-gray-900 text-white flex justify-between h-14 px-5 items-center'>
       <div className="font-bold cursor-pointer text-lg">GetMeAChai</div>
       <ul className='flex gap-7'>
         <li className='cursor-pointer'>Home</li>
