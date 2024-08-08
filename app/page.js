@@ -1,6 +1,8 @@
 
 export default function Home() {
   return (
-    <div>HomePage</div>
+    <div className="text-white">
+      17min
+    </div>
   );
 }
