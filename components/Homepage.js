@@ -54,7 +54,6 @@ const Homepage = () => {
                     <p className='text-center'>Celebrate milestones and offer rewards to incentivize donations. Track campaign progress, thank your supporters, and encourage generosity by providing meaningful rewards for contributions.</p>
                 </div>
             </div>
-            48min
         </>
     )
 }
