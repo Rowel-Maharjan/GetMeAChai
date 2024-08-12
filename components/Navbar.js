@@ -3,21 +3,14 @@
 import { useSession, signIn, signOut } from "next-auth/react"
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from "next/navigation"
 
 const Navbar = () => {
   const { data: session } = useSession()
   const [showdropdown, setshowdropdown] = useState(false)
-  const router = useRouter()
-  useEffect(() => {
-    if (!session) {
-      router.push("/")
-    }
-  }, [session])
   if (session) {
     return (
       <nav className='bg-gray-900 text-white flex justify-between h-16 px-5 items-center'>
-        <Link href="/"><div className="font-bold cursor-pointer text-lg">GetMeAChai</div></Link>
+        <Link href="/dashboard"><div className="font-bold cursor-pointer text-lg">GetMeAChai</div></Link>
         <div className="relative">
           <button onClick={() => setshowdropdown(!showdropdown)} onBlur={() => {
             setTimeout(() => {
