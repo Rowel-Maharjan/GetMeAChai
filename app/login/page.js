@@ -13,6 +13,8 @@ const page = () => {
         }
     }, [session])
 
+    console.log(session)
+
     return (
         <div className='min-h-screen flex flex-col items-center '>
             <h1 className='text-4xl font-bold pt-16 pb-10 major'>Login to get Started</h1>

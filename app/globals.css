@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-.major{
+.major {
     color: #17ed67;
 }
 
-.minor{
+.minor {
     color: #50da7a;
 }
 
+
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    background-color: #1e293b !important;
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+} */
