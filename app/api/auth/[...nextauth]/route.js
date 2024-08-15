@@ -27,7 +27,7 @@ const authoptions = NextAuth({
     ],
     callbacks: {
         async signIn({ user, account, profile, email, credentials }) {
-            if (account.provider == "github") {
+            if (account.provider == "google" || account.provider == "github" || account.provider == "facebook") {
                 //Connect to the database
                 await mongoose.connect("mongodb://localhost:27017/GetMeAChai")
                     .then(async () => {
@@ -37,12 +37,13 @@ const authoptions = NextAuth({
                         if (!currentUser) {
                             const newUser = await Userinfo.create({
                                 email: user.email,
-                                username: user.name
+                                username: user.name,
+                                name: user.email.split("@")[0]
                             })
-                            user.name = newUser.username
+                            user.name = newUser.name
                         }
                         else{
-                            user.name = currentUser.username
+                            user.name = currentUser.name
                         }
                     })
                     .catch(() => {

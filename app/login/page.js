@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 
-const page = () => {
+const page = async() => {
     const { data: session } = useSession()
     const router = useRouter()
     useEffect(() => {
@@ -12,9 +12,6 @@ const page = () => {
             router.push("/dashboard")
         }
     }, [session])
-
-    console.log(session)
-
     return (
         <div className='min-h-screen flex flex-col items-center '>
             <h1 className='text-4xl font-bold pt-16 pb-10 major'>Login to get Started</h1>
