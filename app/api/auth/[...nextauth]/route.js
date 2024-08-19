@@ -40,10 +40,6 @@ const authoptions = NextAuth({
                                 username: user.name,
                                 name: user.email.split("@")[0]
                             })
-                            user.name = newUser.name
-                        }
-                        else{
-                            user.name = currentUser.name
                         }
                     })
                     .catch(() => {
@@ -52,11 +48,12 @@ const authoptions = NextAuth({
             }
             return true; //Needed to sign in
         },
-        // async session({ session, user, token }) {
-        //     const dbuser = await Userinfo.findOne({ email: session.user.email })
-        //     session.user.name = dbuser.username
-        //     return session
-        // }
+        async session({ session, user, token }) {
+            const dbuser = await Userinfo.findOne({ email: session.user.email })
+            session.user.name = dbuser.name
+            session.user.username = dbuser.username
+            return session
+        }
 
     }
 })

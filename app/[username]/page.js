@@ -56,8 +56,8 @@ const Username = ({ params }) => {
             <h1 className='font-bold text-3xl mb-5 major'>Payments</h1>
             <div className="flex gap-2 flex-col">
               <input className='w-full bg-slate-800 rounded-lg p-2 px-3 outline-none' placeholder='Enter Name' type="text" />
-              <input className='w-full bg-slate-800 rounded-lg p-2 px-3 outline-none' placeholder='Enter Message' type="text" />
               <input className='w-full bg-slate-800 rounded-lg p-2 px-3 outline-none' placeholder='Enter Amount' type="text" />
+              <input className='w-full bg-slate-800 rounded-lg p-2 px-3 outline-none' placeholder='Enter Message' type="text" />
               <button type="button" className="bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl  font-medium rounded-lg text-sm px-5 py-2.5 text-center">Pay</button>
             </div>
             <div className="flex gap-2 mt-4">

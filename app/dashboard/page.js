@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
 
+
 const page = () => {
 
   const { data: session } = useSession()
@@ -15,6 +16,8 @@ const page = () => {
   }, [session, router])
 
   const [form, setform] = useState({})
+
+
   const handleChange = (e) => {
     setform({ ...form, [e.target.name]: e.target.value })
   }
